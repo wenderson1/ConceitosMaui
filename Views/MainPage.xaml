@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MauiApp1.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:MauiApp1.ViewModels"
+    x:DataType="vm:MainViewModel"
+    BackgroundColor="YellowGreen">
+
+    <!--<VerticalStackLayout Margin="10" VerticalOptions="Center">
+        <Slider x:Name="slider" Maximum="360" />
+        <Label
+            BindingContext="{x:Reference slider}"
+            FontSize="Medium"
+            HorizontalOptions="Center"
+            Rotation="{Binding Path=Value}"
+            Text="Rotação"
+            TextColor="Black" />
+    </VerticalStackLayout>-->
+    <VerticalStackLayout Spacing="20">
+        <Entry
+            Placeholder="Nome"
+            PlaceholderColor="Black"
+            Text="{Binding Nome}"
+            TextColor="Black" />
+
+        <Entry
+            Placeholder="Email"
+            PlaceholderColor="Black"
+            Text="{Binding Email}"
+            TextColor="Black" />
+
+        <Entry
+            IsPassword="True"
+            Placeholder="Senha"
+            PlaceholderColor="Black"
+            Text="{Binding Senha}"
+            TextColor="Black" />
+
+        <Button
+            BackgroundColor="{StaticResource Primary}"
+            Command="{Binding SalvarCommand}"
+            Text="Salvar"
+            TextColor="White" />
+
+    </VerticalStackLayout>
+</ContentPage>
